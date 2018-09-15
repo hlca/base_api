@@ -1,11 +1,11 @@
 package controllers
 
 import (
-	"base_api/app"
-	"base_api/models"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	jwt "github.com/dgrijalva/jwt-go"
+	"github.com/hlca/base_api/app"
+	"github.com/hlca/base_api/models"
 	"strconv"
 	"time"
 )

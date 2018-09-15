@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"base_api/app"
 	"github.com/astaxie/beego"
+	"github.com/hlca/base_api/app"
 )
 
 type NestPreparer interface {
