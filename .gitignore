@@ -1,0 +1,4 @@
+*.exe
+*.exe~
+base_api
+app/config.go
