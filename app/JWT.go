@@ -21,7 +21,7 @@ func ParseJWT(ctx *context.Context) (bool, string) {
 	var key, _ = jwt.Parse(jwt_string, func(token *jwt.Token) (interface{}, error) {
 		expire_at = token.Claims.(jwt.MapClaims)["expire_at"].(string)
 
-		return beego.AppConfig.String("secretkey"), nil
+		return []byte(beego.AppConfig.String("secretkey")), nil
 	})
 	if key != nil {
 		if key.Valid {

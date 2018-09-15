@@ -46,7 +46,7 @@ func (c *AuthController) Post() {
 			"expire_at": strexp,
 		})
 
-		tokenString, _ := token.SignedString(beego.AppConfig.String("secretkey"))
+		tokenString, _ := token.SignedString([]byte(beego.AppConfig.String("secretkey")))
 		var responseUser *app.Auth = new(app.Auth)
 		responseUser.Token = tokenString
 		responseUser.Expire_at = exp
