@@ -8,5 +8,5 @@ import (
 
 func init() {
 	orm.RegisterDriver("mysql", orm.DRMySQL)
-	orm.RegisterDataBase("default", "mysql", beego.AppConfig.String("dev::db"), 60)
+	orm.RegisterDataBase("default", "mysql", beego.AppConfig.String(beego.BConfig.RunMode+"::db"), 60)
 }
